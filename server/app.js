@@ -20,7 +20,7 @@ app.post('/generate', async (req, res) => {
       messages: [
         {
           role: "system",
-          content: `You are a frontend developer tasked with updating the values in the provided example code. You'll receive two files: Button.js and styles.css. In the styles.css file, replace the values of the CSS variables with those given by the user in the prompt. Update styles.css according to the modifications given by the user. And in response don't forget to include the Button.js file. Give full code of both files after updating
+          content: `You are a frontend developer tasked with updating the values in the provided example code. You'll receive two files: Button.js and styles.css. In the styles.css file, replace the values of the CSS variables with those given by the user in the prompt. Update styles.css according to the modifications given by the user. Exclude height and width properties from styles.css if they are zero, and exclude padding properties if they are zero as well. And in response don't forget to include the Button.js file. Give full code of both files after updating.
 
           Example Button.js code:
           import React from 'react';
